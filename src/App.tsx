@@ -1,10 +1,11 @@
 import React from 'react';
+import { Widget } from './components/Widget';
 
-function App() {
+export function App() {
   return (<>
-    <h1 className="text-center">Started</h1>
+    <Widget />
   </>
   );
 }
 
-export default App;
+
