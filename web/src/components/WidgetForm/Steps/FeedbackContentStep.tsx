@@ -30,24 +30,24 @@ export function FeedbackContentStep({
 
     setIsSendingFeedback(true);
 
-    await api.post("/feedbacks", {
-      type: feedbackType,
-      comment,
-      screenshot,
-    });
+    // await api.post("/feedbacks", {
+    //   type: feedbackType,
+    //   comment,
+    //   screenshot,
+    // });
 
-    setIsSendingFeedback(false);
+    // setIsSendingFeedback(false);
 
-    onFeedbackSent()
+    // onFeedbackSent()
 
-    //  setTimeout(() => {
-    //     console.log({
-    //       screenshot,
-    //       comment
-    //     });
-    //     setIsSendingFeedback(false);
-    //     onFeedbackSent()
-    //   }, 1000)
+     setTimeout(() => {
+        console.log({
+          screenshot,
+          comment
+        });
+        setIsSendingFeedback(false);
+        onFeedbackSent()
+      }, 1300)
   }
 
   return (
