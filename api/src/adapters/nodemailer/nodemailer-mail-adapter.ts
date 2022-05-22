@@ -1,6 +1,9 @@
 import nodemailer from "nodemailer";
 import { MailAdapter, SendMailData } from "../mail-adapter";
 
+require("dotenv").config()
+
+
 const transport = nodemailer.createTransport({
   host: "smtp.mailtrap.io",
   port: 2525,
@@ -11,7 +14,12 @@ const transport = nodemailer.createTransport({
 });
 
 export class NodemailerMailAdapter implements MailAdapter {
+
   async sendMail({ subject, body }: SendMailData): Promise<void> {
+    console.log( {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PWD
+    })
     await transport.sendMail({
       from: "Suport Widget <siport@widget.com>",
       to: "Cicero Gasparini Brunelli <cicero.brunelli@gmail.com>",
