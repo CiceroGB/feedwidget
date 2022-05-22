@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "ts-node-dev src/server.ts",
-    "start": "npx prisma migrate deploy && node dist/server.js",
-    "clean": "rimraf dist/",
-    "build": "npm run clean && npx tsc && npm run copy-files"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev src/server.ts"
   },
   "keywords": [],
   "author": "",
