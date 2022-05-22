@@ -10,7 +10,11 @@
  
 </div>
 
+
+
 ## About project
+
+https://feedwidget-mu.vercel.app
 
 Developed on the Next Level Week Return event by [Rocketseat](https://rocketseat.com.br/) to connect teachers and students, where you can search for classes by subjects and specific days and times
 
